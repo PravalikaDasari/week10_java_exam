@@ -21,7 +21,7 @@ public class YoungestEmployeeInEachDept
 		
 		for(Entry<String, List<Employee>> entry :entrySet)
 		{
-			System.out.println(entry.getKey()+"--"+entry.getValue().get(0));
+			System.out.println(entry.getKey()+"--"+entry.getValue().stream().findFirst().orElseThrow());
 		}
 		
 	}
